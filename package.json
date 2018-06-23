@@ -1,0 +1,22 @@
+{
+  "name": "a",
+  "version": "1.0.0",
+  "description": "",
+  "main": "handler.js",
+  "dependencies": {},
+  "devDependencies": {
+    "serverless-dynamodb-client": "0.0.2",
+    "serverless-dynamodb-local": "^0.2.30",
+    "serverless-offline": "^3.25.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install": "docker pull lambci/lambda",
+    "setup": "./node_modules/.bin/sls config credentials --provider aws --key KEY --secret SECRET",
+    "start": "./node_modules/.bin/sls offline start -r us-east-1 --noTimeout",
+    "install:dynamodb": "./node_modules/.bin/sls dynamodb install",
+    "start:dynamodb": "./node_modules/.bin/sls dynamodb start -p 8000  --migrate true"
+  },
+  "keywords": [],
+  "author": "dong.yang"
+}
