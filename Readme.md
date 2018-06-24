@@ -32,8 +32,7 @@ The code developerd under this images will work seemless when deployed to AWS.
 - docker (to run the enviroment)
 - visual studio code (recommded for JavaScript IDE)
 
-## How to use
-### First team member
+## Getting start
 1. Download the code
 2. run commands (Mac/Linux)
     ```bash
@@ -52,8 +51,13 @@ The code developerd under this images will work seemless when deployed to AWS.
     git push -u origin master
     ```
 
-## Other team members
-1. Git clone your team code repo
+## How to use
+
+The API link is http://localhost:3000. When making change in the working directory, it reflect by a simple browser refresh.
+
+Dynamodb console can be access by http://localhost:8000/shell. In the code, no special setting is required while serverless offline plugin used.
+
+1. Git clone your team code repo (initialled from getting start)
 2. run commands
     ```bash
     docker build -t nodeDevQuickStart Docker
