@@ -1,19 +1,11 @@
-FROM node:10.5.0-alpine
+FROM node:10.5.0
 
-EXPOSE 4000 8000
+RUN apt-get update && \
+    apt-get install -y openjdk-7-jre
 
-RUN apk -v --update add \
-        python \
-        py-pip \
-        groff \
-        less \
-        mailcap \
-        && \
-    pip install --upgrade awscli==1.14.5 s3cmd==2.0.1 python-magic && \
-    apk -v --purge del py-pip && \
-    rm /var/cache/apk/*
-
-RUN apk --update add openjdk8-jre
+RUN echo "===> clean up..."  && \
+    apt-get clean  && \
+    rm -rf /var/lib/apt/lists/*
 
 RUN mkdir -p /code
 WORKDIR /code
