@@ -12,6 +12,7 @@ WORKDIR /code
 
 RUN npm install -g serverless
 
+COPY bashrc.template.sh /root/.bashrc
 COPY entrypoint.sh /tmp/entrypoint.sh
 RUN chmod 755 /tmp/entrypoint.sh
 

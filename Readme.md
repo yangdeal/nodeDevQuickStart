@@ -36,8 +36,7 @@ The code developerd under this images will work seemless when deployed to AWS.
 1. Download the code
 2. run commands (Mac/Linux)
     ```bash
-    docker build -t nodeDevQuickStart Docker
-    docker run -it --rm -v ${PWD}:/code -p 4000:4000 -p 8000:8000 nodeDevQuickStart
+    ./start.sh
     ```
 3. Link to your code repo
 
@@ -60,10 +59,12 @@ Dynamodb console can be access by http://localhost:8000/shell. In the code, no s
 1. Git clone your team code repo (initialled from getting start)
 2. run commands
     ```bash
-    docker build -t nodeDevQuickStart Docker
-    docker run -it --rm -v ${PWD}:/code -p 4000:4000 -p 8000:8000 nodeDevQuickStart
+    ./start.sh
     ```
 3. start coding
+
+# Note
+- All packages should be installed by run npm command inside the docker to avoid conflict
 
 # Reference
 - [serverless](https://serverless.com/)
