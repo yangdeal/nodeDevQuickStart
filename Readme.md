@@ -66,6 +66,13 @@ Dynamodb console can be access by http://localhost:8000/shell. In the code, no s
 # Note
 - All packages should be installed by run npm command inside the docker to avoid conflict
 
+# Screen shot
+- start
+    ![start](doc/start.png)
+
+- npm test
+    ![npm test](doc/npmtest.png)
+
 # Reference
 - [serverless](https://serverless.com/)
 - [serverless offline](https://www.npmjs.com/package/serverless-offline)
