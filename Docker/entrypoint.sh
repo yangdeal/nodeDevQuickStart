@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 if [ ! -d "/code/node_modules" ]; then
     npm install
@@ -12,5 +12,13 @@ else
 fi
 
 sls offline start > /var/log/serverless.log &
+
+echo -n "Strating serverless offline."
+while [[ "$(curl -s -o /dev/null -w ''%{http_code}'' localhost:3000/non-exist)" != "404" ]]; do echo -n .; sleep 1; done
+echo ""
+echo "Serverless offline ready, enjoy."
+echo "use \"nt\" for shortcut of \"npm test\""
+echo ""
+echo ""
 
 /bin/bash

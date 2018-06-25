@@ -1,7 +1,7 @@
 FROM node:10.5.0
 
 RUN apt-get update && \
-    apt-get install -y openjdk-7-jre
+    apt-get install -y openjdk-7-jre net-tools
 
 RUN echo "===> clean up..."  && \
     apt-get clean  && \
@@ -11,6 +11,7 @@ RUN mkdir -p /code
 WORKDIR /code
 
 RUN npm install -g serverless
+RUN serverless config credentials --provider aws --key 1234 --secret 5678
 
 COPY bashrc.template.sh /root/.bashrc
 COPY entrypoint.sh /tmp/entrypoint.sh
