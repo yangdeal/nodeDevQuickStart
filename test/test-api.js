@@ -1,16 +1,16 @@
 var expect  = require('chai').expect;
 var request = require('request');
 
-describe('Status and content', function() {
-    describe ('Main page', function() {
-        it('Main page status', function(done) {
+describe('API gateway:', function() {
+    describe ('Hello page', function() {
+        it('status 200', function(done) {
             request('http://localhost:3000/hello' , function(error, response, body) {
                 expect(response.statusCode).to.equal(200);
                 done();
             });
         });
 
-        it('Main page content', function(done) {
+        it('content', function(done) {
             request('http://localhost:3000/hello' , function(error, response, body) {
                 expect(body).to.equal("{\"message\":\"Hello World!\"}");
                 done();
@@ -18,9 +18,9 @@ describe('Status and content', function() {
         });
     });
 
-    describe ('About page', function() {
-        it('status', function(done){
-            request('http://localhost:3000/about', function(error, response, body) {
+    describe ('non-exist page', function() {
+        it('status 404', function(done){
+            request('http://localhost:3000/non-exist', function(error, response, body) {
                 expect(response.statusCode).to.equal(404);
                 done();
             });

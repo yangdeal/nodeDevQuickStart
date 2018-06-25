@@ -6,9 +6,9 @@ region: "ap-southeast-2",
 endpoint: "http://localhost:8000"
 });
 
-describe ("Check create table opration", function() {
+describe ("DynamoDB:", function() {
     describe("create table", function() {
-        it("should create a table if not existing", function() {
+        it("should create table without error", function() {
             var dynamodb = new AWS.DynamoDB();
             // var serverlessdynamodb = require('serverless-dynamodb-client');
             // var dynamodb = serverlessdynamodb.raw;
