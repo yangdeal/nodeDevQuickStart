@@ -3,7 +3,7 @@ This repo is for Nodejs develpers quick start AWS lambda developement work .
 
 Developer can quickly start work in his local laptop without AWS account or connection by few commands. 
 
-The code developerd under this images will work seemless when deployed to AWS.
+The code developered under this images will work seemless when deployed to AWS.
 
 ## What packages included:
 1. node
@@ -15,22 +15,22 @@ The code developerd under this images will work seemless when deployed to AWS.
 7. dynamodb
 
 ## Limitations
-- Only support Nodejs development. Java is not supported as serverless framework support Nodejs only
+- Only Nodejs development supported. Java is not supported since not supported by serverless framework
 
 ## Todo
-- Test code on windows. Currently the code tested in Mac enviroment
-- Test proxy. Currently the code tested in under the enviroment without proxy
+- Test on windows. All tests are done in Mac enviroment
+- Test proxy. All tests are done under the enviroment without proxy
 
 ## Benifit to run the enviroment using docker
-- quick start, just run docker command
+- quick start, just run few commands
 - OS independent, it can run on Windows, Linux or Mac
-- consistance configure accross all developer
-- consistance configure accross all enviroments, developement, SIT or even prod
+- Consistance configure accross all developers
+- Consistance configure accross all enviroments, developement, SIT or even prod
 - Easy for CI/CD deployment
 
 ## Pre-requirements
 - docker (to run the enviroment)
-- visual studio code (recommded for JavaScript IDE)
+- visual studio code (recommded JavaScript IDE)
 
 ## Getting start
 1. Download the code
@@ -52,9 +52,11 @@ The code developerd under this images will work seemless when deployed to AWS.
 
 ## How to use
 
-The API link is http://localhost:3000. When making change in the working directory, it reflect by a simple browser refresh.
+The API URL is http://localhost:3000. When making code change in the working directory, simplely refres the browser to get the new code run.
 
-Dynamodb console can be access by http://localhost:8000/shell. In the code, no special setting is required while serverless offline plugin used.
+All API call log stored in: /var/log/serverless.log
+
+Dynamodb console can be access: http://localhost:8000/shell.
 
 1. Git clone your team code repo (initialled from getting start)
 2. run commands
@@ -64,13 +66,15 @@ Dynamodb console can be access by http://localhost:8000/shell. In the code, no s
 3. start coding
 
 # Note
-- All packages should be installed by run npm command inside the docker to avoid conflict
+- Run npm command insde the docker but not from host machine. All packages should be installed by run npm command inside the docker to avoid conflict
 
 # Screen shot
 - start
+
     ![start](doc/start.png)
 
 - npm test
+
     ![npm test](doc/npmtest.png)
 
 # Reference
