@@ -1,7 +1,7 @@
 # Node development quick start
 This repo is for Nodejs develpers quick start AWS lambda developement work .
 
-Developer can quickly start work in his local laptop without AWS account or connection by few commands. 
+Developer can quickly start work in his local laptop without AWS account or connection by few commands in few minutes. 
 
 The code developered under this images will work seemless when deployed to AWS.
 
