@@ -13,7 +13,6 @@ functions:
           method: get
 
 plugins:
-  - serverless-dynamodb-local
   - serverless-offline
 
 custom:

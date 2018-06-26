@@ -9,8 +9,7 @@ The code developered under this images will work seemless when deployed to AWS.
 1. node
 2. npm
 3. serverless framework
-4. serverless-dynamodb-local 
-5. serverless-dynamodb-client 
+5. serverless-dynamodb-client
 6. serverless-offline
 7. dynamodb
 
@@ -80,8 +79,4 @@ Dynamodb console can be access: http://localhost:8000/shell.
 # Reference
 - [serverless](https://serverless.com/)
 - [serverless offline](https://www.npmjs.com/package/serverless-offline)
-- [serverless dynamodb local](https://www.npmjs.com/package/serverless-dynamodb-local)
-
-
-
-
+- [dynamodb local](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DynamoDBLocal.html)
